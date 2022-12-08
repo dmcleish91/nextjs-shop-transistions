@@ -79,7 +79,7 @@ export default function Home(props: { products: ProductData[] }) {
 }
 
 Home.getInitialProps = async () => {
-	const res = await fetch('http://my-json-server.typicode.com/dmcleish91/demo/products');
+	const res = await fetch('https://my-json-server.typicode.com/dmcleish91/demo/products');
 	const data = await res.json();
 
 	return { products: data };

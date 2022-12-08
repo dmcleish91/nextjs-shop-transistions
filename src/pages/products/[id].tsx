@@ -54,7 +54,7 @@ export default function Product(props: { product: ProductData }) {
 
 Product.getInitialProps = async (context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>) => {
 	const { id } = context.query;
-	const res = await fetch(`http://my-json-server.typicode.com/dmcleish91/demo/products/${id}`);
+	const res = await fetch(`https://my-json-server.typicode.com/dmcleish91/demo/products/${id}`);
 	const product = await res.json();
 	return { product: product };
 };
